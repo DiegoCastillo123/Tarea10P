@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    tools:context=".ListaPerdidos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#C96C40E8"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnAdopcionP"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9CD391A5"
+            android:layout_margin="5dp"
+            android:text="ADOPCIÓN"
+            android:onClick="onClick"
+            android:textColor="@color/black"/>
+
+
+        <Button
+            android:id="@+id/btnEncontradosP"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9CD391A5"
+            android:onClick="onClick"
+            android:text="ENCONTRADOS"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="Perdidos"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/design_default_color_primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPerdidoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSalirP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D68585"
+                android:layout_margin="5dp"
+                android:text="SALIR"
+                android:onClick="onClick"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
